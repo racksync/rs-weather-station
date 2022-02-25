@@ -48,7 +48,7 @@
 ## คำสั่งที่เกี่ยวข้อง
 
 | CMD           |  Usage/Example      | Description      |
-|------------------|------------------|
+|------------------|------------------|------------------|
 | ``sensor18``              | sensor18 300 | ตั้งค่า polling interval เพื่อไม่ให้ sensor รันในโหมด active ตลอดเวลา เพื่อยืดอายุการใช้งาน
 | ``fade``              | fade on/off | เปิดโหมด rgb dim light
 | ``speed``              | speed 5 | ความเร็วในการเปลี่ยน effect/dimming
