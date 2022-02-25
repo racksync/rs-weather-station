@@ -66,9 +66,13 @@
 - โทร 085 880 8885
 - [FB](https://facebook.com/racksync)
 
-### R&D Engineer
+### Engineer
 
-- Nattaphit Jengsriwong
+| Name             | Responsible         |
+|------------------|------------------|
+| Damrongwit Nusuk | Software Engineer
+| Nattaphit Jengsriwong   | Hardware Engineer
+
 
 ### หากพบปัญหาในการใช้งาน กรุณาส่งเข้า issue
 
