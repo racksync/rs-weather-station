@@ -62,7 +62,9 @@
 - [อธิบายการทำงานของ Node-RED](screenshot/node-red.mp4)
 - [อธิบายการตั้งค่า](screenshot/wifi-config.mov)
 
-
+### สนใจสั่งซื้อ
+- โทร 085 880 8885
+- [FB](https://facebook.com/racksync)
 
 ### R&D Engineer
 
@@ -73,7 +75,7 @@
 ### บริการและเทรนนิ่งคอร์สด้าน Automation 
 
 - [สินค้าและบริการ](http://racksync.com)
-- [เทรนนิ่งคอร์ส](https://facebook.com/racksync)
+- [เทรนนิ่งคอร์ส](https://www.racksync.com/products/)
 
 ### ชุมชนและแหล่งซื้อขาย Home Automation
 
