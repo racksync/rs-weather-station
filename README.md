@@ -29,6 +29,8 @@
 
 1. ทำการเชื่อมต่อเซ็นเซอร์เข้ากับ WIFI Access Point โดยจ่ายไฟให้กับกล่อง หลังจากนั้นจะเจอ SSID ที่ชื่อว่า "rs-weather-station" ให้เกาะ SSID ดังกล่าว
 
+![racksync-fallback_ap](screenshot/fallback_ap.png)
+
 2. ``Configuration -> Configure Other -> Activate Template``  
 
 3. ``Configuration -> Configure MQTT`` เพื่อเชื่อมต่อไปยัง Home Assistant
@@ -45,12 +47,12 @@
 
 ## คำสั่งที่เกี่ยวข้อง
 
-| CMD           | Description      |
+| CMD           |  Usage/Example      | Description      |
 |------------------|------------------|
-| ``SCL``              | D4 | GPIO2
-| ``SDA``              | D2 | GPIO4
-| ``LED``              | D1 | GPIO5
-| ``PMS7003 (TX)``     | D5 | GPIO14 
+| ``sensor18``              | sensor18 300 | ตั้งค่า polling interval เพื่อไม่ให้ sensor รันในโหมด active ตลอดเวลา เพื่อยืดอายุการใช้งาน
+| ``fade``              | fade on/off | เปิดโหมด rgb dim light
+| ``speed``              | speed 5 | ความเร็วในการเปลี่ยน effect/dimming
+
 
 ## ไฟล์อื่น ๆ 
 
@@ -60,10 +62,7 @@
 - [อธิบายการทำงานของ Node-RED](screenshot/node-red.mp4)
 - [อธิบายการตั้งค่า](screenshot/wifi-config.mov)
 
-![racksync-fallback_ap](screenshot/fallback_ap.png)
-![racksync-ip](screenshot/ip_redirect.png)
-![racksync-tasmota](screenshot/tasmota-display.png)
-![racksync-wifi](screenshot/wifi_credentials.png)
+
 
 
 
