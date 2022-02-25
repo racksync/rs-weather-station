@@ -1,6 +1,6 @@
 # Home Assistant Weather Station
 
-![racksync-hass](screenshot/homeassistant.png)
+![racksync-hass](screenshot/IKEA.png)
 
 โปรเจ็คนี้ชื่อว่า RS Weather Station เป็นกล่อง DIY Sensor ที่ประกอบขึ้นโดยใช้กล่องของ Ikea VINDRIKTNING ซึ่งเป็นกล่อง sensor ราคาประหยัดจาก Ikea ที่สวยมากตัวหนึ่งในตลาดและเดิมมีแค่ sensor pm2.5 ซึ่งวัดได้ค่าเดียวและไม่สามารถเชื่อมต่อ Home Assistant ได้ ทางวิศวกรของ RACKSYNC จึงนำมาปรับปรุงเพิ่มชุดอุปกรณ์ที่มีการวัดค่าที่ละเอียดขึ้นและเพิ่ม ESP8266 ให้สามารถทำงานร่วมกับ Home Assistant และน่าใช้มากขึ้น ซึ่งส่วนประกอบที่เพิ่มเข้าไปมีดังต่อไปนี้
 
