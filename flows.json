@@ -1,8 +1,236 @@
 [
     {
-        "id": "387c34ec1e103805",
+        "id": "5ef34e502ab74510",
+        "type": "api-call-service",
+        "z": "4a5f96196f08ceb9",
+        "name": "green",
+        "server": "5a745765.1b0568",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_on",
+        "entityId": "light.rs_weather_station",
+        "data": "{\"rgb_color\":[143,206,0]}",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 830,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c511df57efcbe11",
+        "type": "api-call-service",
+        "z": "4a5f96196f08ceb9",
+        "name": "orange",
+        "server": "5a745765.1b0568",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_on",
+        "entityId": "light.rs_weather_station",
+        "data": "{\"rgb_color\":[247,126,0]}",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 840,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c60e6edae5d18bea",
+        "type": "api-call-service",
+        "z": "4a5f96196f08ceb9",
+        "name": "red",
+        "server": "5a745765.1b0568",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_on",
+        "entityId": "light.rs_weather_station",
+        "data": "{\"rgb_color\":[255,26,93]}",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 830,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a062af6768b37ab",
+        "type": "api-call-service",
+        "z": "4a5f96196f08ceb9",
+        "name": "brightness_pct : 40",
+        "server": "5a745765.1b0568",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_on",
+        "entityId": "light.rs_weather_station",
+        "data": "{\"brightness_pct\":\"40\"}",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 470,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abb36a16ec7e1c19",
+        "type": "inject",
+        "z": "4a5f96196f08ceb9",
+        "name": "20:00 to 40%",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 20 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 245,
+        "y": 360,
+        "wires": [
+            [
+                "8a062af6768b37ab"
+            ]
+        ]
+    },
+    {
+        "id": "23acdeb9b396df30",
+        "type": "api-call-service",
+        "z": "4a5f96196f08ceb9",
+        "name": "brightness_pct : 100",
+        "server": "5a745765.1b0568",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_on",
+        "entityId": "light.rs_weather_station",
+        "data": "{\"brightness_pct\":\"100\"}",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 480,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdb202b0193c83d9",
+        "type": "inject",
+        "z": "4a5f96196f08ceb9",
+        "name": "05:30 to 100%",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "30 05 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 245,
+        "y": 440,
+        "wires": [
+            [
+                "23acdeb9b396df30"
+            ]
+        ]
+    },
+    {
+        "id": "e64bcf2dfbc10a88",
+        "type": "api-call-service",
+        "z": "4a5f96196f08ceb9",
+        "name": "off",
+        "server": "5a745765.1b0568",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_off",
+        "entityId": "light.rs_weather_station",
+        "data": "",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 430,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70428a66cd9e1b32",
+        "type": "inject",
+        "z": "4a5f96196f08ceb9",
+        "name": "23:59 to off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "59 23 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 235,
+        "y": 400,
+        "wires": [
+            [
+                "e64bcf2dfbc10a88"
+            ]
+        ]
+    },
+    {
+        "id": "1c621b39a39caba3",
         "type": "server-state-changed",
-        "z": "6cb41a7464cbabc6",
+        "z": "4a5f96196f08ceb9",
         "name": "PM2.5",
         "server": "5a745765.1b0568",
         "version": 3,
@@ -17,7 +245,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "sensor.rs_weather_station_pms5003_pm2_5",
+        "entityidfilter": "sensor.rs_weather_station_1_pms5003_pm2_5",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -55,17 +283,17 @@
             }
         ],
         "x": 190,
-        "y": 260,
+        "y": 160,
         "wires": [
             [
-                "384a0489024ac2a4"
+                "30bae0b322194ddd"
             ]
         ]
     },
     {
-        "id": "384a0489024ac2a4",
+        "id": "30bae0b322194ddd",
         "type": "switch",
-        "z": "6cb41a7464cbabc6",
+        "z": "4a5f96196f08ceb9",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -92,46 +320,46 @@
         "repair": false,
         "outputs": 3,
         "x": 350,
-        "y": 260,
+        "y": 160,
         "wires": [
             [
-                "d370400dd672d0cc"
+                "bff2b87804d6f7ce"
             ],
             [
-                "96506ad4f6b71278"
+                "37ab3d318c52c360"
             ],
             [
-                "ca131bd5f7198fa2"
+                "ea48590e9418c4c3"
             ]
         ]
     },
     {
-        "id": "d370400dd672d0cc",
+        "id": "bff2b87804d6f7ce",
         "type": "api-call-service",
-        "z": "6cb41a7464cbabc6",
-        "name": "green",
+        "z": "4a5f96196f08ceb9",
+        "name": "green ",
         "server": "5a745765.1b0568",
         "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
         "entityId": "light.rs_weather_station",
-        "data": "{\"color_name\":\"green\"}",
+        "data": "{\"rgb_color\":\"green\"}",
         "dataType": "jsonata",
         "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
-        "y": 200,
+        "x": 570,
+        "y": 120,
         "wires": [
             []
         ]
     },
     {
-        "id": "96506ad4f6b71278",
+        "id": "37ab3d318c52c360",
         "type": "api-call-service",
-        "z": "6cb41a7464cbabc6",
+        "z": "4a5f96196f08ceb9",
         "name": "orange",
         "server": "5a745765.1b0568",
         "version": 3,
@@ -145,16 +373,16 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 600,
-        "y": 260,
+        "x": 580,
+        "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "ca131bd5f7198fa2",
+        "id": "ea48590e9418c4c3",
         "type": "api-call-service",
-        "z": "6cb41a7464cbabc6",
+        "z": "4a5f96196f08ceb9",
         "name": "red",
         "server": "5a745765.1b0568",
         "version": 3,
@@ -168,10 +396,40 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
-        "y": 320,
+        "x": 570,
+        "y": 200,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3d03e6e0a79e4222",
+        "type": "comment",
+        "z": "4a5f96196f08ceb9",
+        "name": "change color in color name",
+        "info": "",
+        "x": 250,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "67047a6af67fc5de",
+        "type": "comment",
+        "z": "4a5f96196f08ceb9",
+        "name": "change color in decimal code",
+        "info": "",
+        "x": 900,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cc21ea930f8baf33",
+        "type": "comment",
+        "z": "4a5f96196f08ceb9",
+        "name": "set brightness",
+        "info": "",
+        "x": 210,
+        "y": 300,
+        "wires": []
     }
 ]

@@ -53,9 +53,29 @@
 | ``fade``              | ``fade on`` | เปิดโหมด rgb dim light
 | ``speed``              | ``speed 5`` | ความเร็วในการเปลี่ยน effect/dimming
 
+## เทคนิคการเปลี่ิยนสีหรือ dim light ตามช่วงเวลา
 
-## ไฟล์อื่น ๆ 
+เมื่อต้องการเปลี่ยนสีหลอด RGB ในแบบละเอียดขึ้นสามารถกำหนด Data Field ใน Node-RED จากเดิมที่เป็นชื่อสี ให้เป็นลักษณะ Decimal หรือเลขฐานสิบได้
 
+| แบบชื่อสี          |  แบบเลชฐานสิบ      |
+|------------------|------------------|
+| ``{"color_name":"red"}``              | ``{"rgb_color":[255,26,93]}`` 
+| ``{"color_name":"green"}``              | ``{"rgb_color":[143,206,0]}`` 
+| ``{"color_name":"orange"}``              | ``{"rgb_color":[247,126,0]}`` 
+
+เมื่อต้องการหรี่แสงเป็นช่วงเวลา สามารถ กำหนด Data Properties ชื่อว่า brightness_pct ได้ทันที
+
+| พรอพเพอร์ตี้          | ความหมาย      |
+|------------------|------------------|
+| ``{"brightness_pct":"40"}``              | ปรับแสงไปที่ระดับ 40% 
+| ``{"brightness_pct":"100"}``              | ปรับแสงสว่างสุด
+
+หมายเหตุ : ตัวอย่างการปรับลดเพิ่มแสงและการตั้งสีตามช่วงปริมาณความเข้มของฝุ่นอยู่ในไฟล์ [Node-RED Flows](flows.json) 
+
+
+## อื่น ๆ
+
+- [Color Code Converter](https://www.color-hex.com/)
 - [Node-RED Flows](flows.json) Flow การตั้งค่าสีหลอดไฟให้แสดงตามความเข้มของค่าฝุ่น
 - [Firmware](bin/rs_weather_station.bin) Firmware พร้อมใช้
 - [Firmware Override](user_config_override.h) ไฟล์ tasmota firmware compile override
