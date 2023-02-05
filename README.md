@@ -27,17 +27,15 @@
 
 ## วิธีใช้ 
 
-1. ทำการเชื่อมต่อเซ็นเซอร์เข้ากับ WIFI Access Point โดยจ่ายไฟให้กับกล่อง หลังจากนั้นจะเจอ SSID ที่ชื่อว่า "rs-weather-station" ให้เกาะ SSID ดังกล่าว
+1. ทำการเชื่อมต่อเซ็นเซอร์เข้ากับ WIFI Access Point โดยจ่ายไฟให้กับกล่อง หลังจากนั้นจะเจอ SSID ที่ชื่อว่า "rs-weather-station-xxxxx" ให้เกาะ SSID ดังกล่าว
 
 ![racksync-fallback_ap](screenshot/fallback_ap.png)
 
-2. ``Configuration -> Configure Other -> Activate Template``  
+2. ``Configuration -> Configure MQTT`` เพื่อเชื่อมต่อไปยัง Home Assistant
 
-3. ``Configuration -> Configure MQTT`` เพื่อเชื่อมต่อไปยัง Home Assistant
+3. พิมพ์คำสั่ง ``sensor18 300`` ที่ tasmota console (รอ sensor calibrate ตัวเองประมาณ 5 นาที ค่าฝุ่นก็จะเริ่มโชว์ครับ)  อันนี้เป็นการตั้งค่า polling interval เพื่อไม่ให้ sensor รันในโหมด active ตลอดเวลา เพื่อยืดอายุการใช้งานครับ
 
-4. พิมพ์คำสั่ง ``sensor18 300`` ที่ tasmota console (รอ sensor calibrate ตัวเองประมาณ 5 นาที ค่าฝุ่นก็จะเริ่มโชว์ครับ)  อันนี้เป็นการตั้งค่า polling interval เพื่อไม่ให้ sensor รันในโหมด active ตลอดเวลา เพื่อยืดอายุการใช้งานครับ
-
-5. ตั้งค่า Node-RED เพื่อสร้าง Automation Rules ตามต้องการ
+4. ตั้งค่า Node-RED เพื่อสร้าง Automation Rules ตามต้องการ
 
 ![racksync-automation-flows](screenshot/node-red_flows.png)
 
